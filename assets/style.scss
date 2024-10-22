@@ -1,0 +1,347 @@
+header {
+  .navbar {
+    ul {
+      display: flex;
+      gap: 20px;
+      padding: 30px 0;
+      li {
+        a {
+          color: black;
+        }
+        .contact {
+          color: #8a5cdd;
+        }
+      }
+    }
+    .menu {
+      display: none;
+    }
+  }
+}
+
+main {
+  #about_skill {
+    background-color: #000;
+    padding: 7rem 0;
+    color: #fff;
+    .about_skill {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+    }
+
+    .text {
+      width: 85%;
+      h2 {
+        font-size: 4.8rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+      }
+
+      p {
+        font-size: 1.8rem;
+        a {
+          color: #a64af8;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      button {
+        margin-top: 1.5rem;
+        padding: 1rem 3rem;
+        background-color: transparent;
+        border: 1px solid white;
+        border-radius: 20px;
+        color: white;
+        font-size: 1.6rem;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background-color: #8a5cdd;
+          color: white;
+          border-color: #8a5cdd;
+        }
+      }
+    }
+
+    .image {
+      position: relative;
+      height: 45rem;
+      width: 80%;
+      img {
+        width: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+
+      .circles {
+        position: absolute;
+        display: flex;
+        bottom: 0;
+        right: -5rem;
+
+        .circle1 {
+          width: 130px;
+          height: 130px;
+          background-color: #a64af8;
+          border-radius: 50%;
+        }
+
+        .circle2 {
+          width: 130px;
+          height: 130px;
+          border-radius: 50%;
+          background-color: #f89a64;
+          position: absolute;
+          left: 10rem;
+          z-index: 10;
+        }
+      }
+    }
+  }
+
+  #why-us {
+    margin-top: 5rem;
+    h2 {
+      margin-bottom: 3rem;
+      font-size: 4.8rem;
+    }
+    .why-us {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(2, 1fr);
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        border: 2px solid #000000;
+        height: 31.5rem;
+        border-radius: 20px;
+        padding: 3rem;
+
+        .icon {
+          width: 10rem;
+          height: 10rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+
+          i {
+            font-size: 4.5rem;
+            color: white;
+          }
+        }
+
+        .icon1 {
+          background: #8a5cd9;
+        }
+
+        .icon2 {
+          background: #f2d45a;
+        }
+
+        .icon3 {
+          background: #f0974f;
+        }
+
+        .icon4 {
+          background: #7cc5c1;
+        }
+
+        h3 {
+          margin-top: 30px;
+          font-size: 2rem;
+          font-weight: bold;
+        }
+
+        p {
+          font-size: 1.8rem;
+          color: #666;
+          margin-top: 2rem;
+        }
+      }
+    }
+  }
+
+  #our-speakers {
+    margin-top: 8rem;
+    padding-bottom: 8rem;
+    h2 {
+      margin-bottom: 3rem;
+      font-size: 4.8rem;
+    }
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 15px;
+      grid-template-areas:
+        "testimonial-left image-center testimonial-right"
+        "image-left-bottom image-center image-right-bottom"
+        "image-left-bottom testimonial-center image-right-bottom";
+    }
+
+    .testimonial {
+      padding: 20px;
+      border-radius: 8px;
+      color: white;
+      display: flex;
+      align-items: center;
+
+      p {
+        line-height: 27px;
+      }
+    }
+
+    .purple {
+      background-color: #6a5acd;
+      grid-area: testimonial-left;
+    }
+
+    .black {
+      background-color: #000;
+      grid-area: testimonial-right;
+    }
+
+    .orange {
+      background-color: #ffa500;
+      grid-area: testimonial-center;
+    }
+
+    .image-center {
+      grid-area: image-center;
+    }
+
+    .image-left-bottom {
+      grid-area: image-left-bottom;
+    }
+
+    .image-right-bottom {
+      grid-area: image-right-bottom;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+  }
+}
+
+footer {
+  height: 22rem;
+  width: 100%;
+  background-color: #333333;
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+    height: 100%;
+    P {
+      color: #fff;
+      text-align: center;
+    }
+    a {
+      color: #cdb9f0;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  header {
+    .navbar {
+      ul {
+        display: none;
+      }
+      .menu {
+        display: block;
+        padding: 30px 0;
+        i {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+  main {
+    #about_skill {
+      .about_skill {
+        grid-template-columns: 1fr;
+        .image {
+          width: 100%;
+          margin-top: 3rem;
+          .circles {
+            right: 10rem;
+          }
+        }
+      }
+    }
+    #our-speakers {
+      .testimonial-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        grid-template-areas:
+          "testimonial-left"
+          "image-left-bottom "
+          "image-center  "
+          "testimonial-center "
+          "testimonial-right"
+          "image-right-bottom";
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 992px) {
+  header {
+    .navbar {
+      ul {
+        display: none;
+      }
+      .menu {
+        display: block;
+        padding: 30px 0;
+        i {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+  main {
+    #about_skill {
+      .about_skill {
+        grid-template-columns: 1fr;
+        .image {
+          width: 100%;
+          margin-top: 3rem;
+          .circles {
+            right: 10rem;
+          }
+        }
+      }
+    }
+    #our-speakers {
+      .testimonial-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto auto auto auto;
+        gap: 15px;
+        grid-template-areas:
+          "testimonial-left image-center"
+          "image-left-bottom image-center"
+          "image-left-bottom  testimonial-center"
+          "testimonial-right testimonial-right"
+          "image-right-bottom image-right-bottom";
+      }
+    }
+  }
+}
